@@ -1,0 +1,29 @@
+# Go build artifacts
+bin/
+pkg/
+*.a
+*.so
+*.exe
+*.dll
+*.dylib
+*.test
+*.out
+
+# Development environment artifacts
+.DS_Store
+.idea/
+.vscode/
+*.swp
+*~
+
+# External tools and dependencies
+vendor/
+go.sum
+glide.lock
+
+# Other files and directories
+.env
+*.env
+local.env
+testdata/
+tmp/
