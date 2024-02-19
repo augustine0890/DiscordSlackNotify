@@ -1,6 +1,7 @@
 package slack
 
 import (
+	"discord-slack-notify/util"
 	"log"
 	"os"
 
@@ -26,7 +27,7 @@ func SendSlackMessage(channelID string, message string) {
 		Text:    message,
 	}
 
-	_, _, err := api.PostMessage(
+	channelID, timestamp, err := api.PostMessage(
 		channelID,
 		slack.MsgOptionAttachments(attachment),
 	)
@@ -34,5 +35,5 @@ func SendSlackMessage(channelID string, message string) {
 		log.Fatalf("Error posting message: %s\n", err)
 	}
 
-	// log.Printf("Message successfully sent to Channel %s at %s\n", channelID, timestamp)
+	log.Printf("Message successfully sent to Channel %s at %s\n", channelID, util.HumanReadableTime(timestamp))
 }
