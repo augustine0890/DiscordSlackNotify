@@ -23,7 +23,7 @@ func SendSlackMessage(channelID string, message string) {
 	}
 
 	attachment := slack.Attachment{
-		Pretext: "For Testing Purpose",
+		Pretext: "🔔 New Discord Notification:",
 		Text:    message,
 	}
 
