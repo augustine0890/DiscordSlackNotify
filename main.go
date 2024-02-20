@@ -25,11 +25,11 @@ func main() {
 	}
 	log.Printf("Running with %v environment\n", *stage)
 
-	log.Println("DiscordSlackNotify")
+	log.Println("Slanotficy")
 	// Initialize Slack client once
 	slack.InitializeSlackClient()
 
-	// Use sendSlackMessage whenever needed
+	// Use SendSlackMessage whenever needed
 	// slack.SendSlackMessage("", "New message from Discord!")
 
 	// Create a new Discord session using the provided bot token
